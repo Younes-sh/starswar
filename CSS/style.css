@@ -10,10 +10,15 @@ body{
     background-size: cover;
     background-attachment: fixed;
 }
+/*          Fonts        */
+@font-face{
+    font-family:starswar ;
+    src: url();
+}
 /*                  Grid         */
-.head{grid-area: head;}
+/* .head{grid-area: head;}
 .main{grid-area: main;}
-.footer{grid-area: footer;}
+.footer{grid-area: footer;} */
 
 .container{
     grid-template-areas: 'head head head head head head'
@@ -122,6 +127,48 @@ body{
     color: #d4c817;
     border-bottom: solid 1px;
 }
+/*           sidebar Right       */
+.btnSidebar{
+    width: 100px;
+    height: 30px;
+    margin-top: 70px;
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+.btnSidebar::before{
+    content: '\002613';
+    color: rgb(228, 80, 80);
+}
+.btnSidebar::before{
+    content: '\002630';
+    color: white;
+
+}
+.sidebar{
+    width: 250px;
+    height: 100vh;
+    margin-top: 100px;
+    position: absolute;
+    float: right;
+    background-color: rgba(46, 35, 35, 0.425);
+    text-align: center;
+}
+.showSIdebar{
+    width: 250px;
+    transition: 1s;
+}
+.hideSidebar{
+    display: none;
+}
+.sidebar h1{
+    margin: 20px 0;
+    color: #fcf1f0;
+    font-family: starswar;
+
+}
 /*          main         */
 
 .container-mars{
@@ -169,6 +216,13 @@ body{
 
 /*          text star war   */
 
+.footer a{
+    margin:400px;
+    z-index: 3;
+}
+section{
+    overflow: hidden;
+}
 .fade {
     position: relative;
     width: 100%;
@@ -179,11 +233,13 @@ body{
   }
   
   .star-wars {
+      margin-left: 200px;
     display: flex;
     justify-content: center;
     position: relative;
     height: 800px;
-    color: #feda4a;
+    color: #f5f3ec;
+    text-shadow: 0 0 2px black;
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 250%;
     font-weight: 600;
