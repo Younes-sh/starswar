@@ -3,22 +3,20 @@
     padding: 0%;
     box-sizing: border-box;
 }
+
 body{
     background-image: url(https://wallpapercave.com/wp/wp2939697.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
 }
 /*          Fonts        */
 @font-face{
     font-family:starswar ;
     src: url();
 }
-/*                  Grid         */
-/* .head{grid-area: head;}
-.main{grid-area: main;}
-.footer{grid-area: footer;} */
 
 .container{
     grid-template-areas: 'head head head head head head'
@@ -169,6 +167,16 @@ body{
     font-family: starswar;
 
 }
+.sidebar p{
+    color: #fff;
+    padding: 0 20px 10px;
+    text-align: left;
+
+}
+.sidebar a{
+    text-decoration: none;
+    color: rgb(190, 190, 32);
+}
 /*          main         */
 
 .container-mars{
@@ -206,13 +214,149 @@ body{
     position: absolute;
     background-color: #fcf1f0;
     cursor: pointer;
+    animation: flashingLights 2s infinite;
+}
+@keyframes flashingLights {
+    from{
+        box-shadow: 0 0 0px red;
+    }
+    to{
+        box-shadow: 2px 0 2px rgba(255, 0, 0, 0.664) ,
+        5px 0 2px rgb(187, 176, 176),
+        9px 0 2px red,
+        13px 0 2px rgb(187, 176, 176),
+        17px 0 2px red,
+        21px 0 2px rgb(187, 176, 176),
+        26px 0 2px red,
+        31px 0 2px rgb(187, 176, 176)
+    }
 }
 
+.shuttle-i{
+    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 5px;
+    padding: 5px;
+    animation: shuttle-info 150s infinite;
+}
+.show-info{
+    display: none;
+    background-color: transparent;
+}
+.horizontal{
+    width: 200px;
+    height: 150px;
+    animation: shuttle-info  infinite;
+}
+ @keyframes shuttle-info {
+    from{
+        transform: rotate();
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+} 
+.shuttle-i button:hover{
+    color: #f5f3ec;
+}
+
+.shuttle p{
+    font-family: 'Source Code Pro', monospace;  
+    color: #fff;
+    white-space: nowrap;
+    overflow: scroll;
+    animation: typewriter 5s steps(15)  alternate,
+      blink 8s steps(2)  normal;
+    border-right: 2px solid rgb(61, 119, 56);
+}
+@keyframes typewriter {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 50%;
+    }
+  }
+  @keyframes blink {
+    from {
+      border-color: rgb(226, 141, 31);
+    }
+    to {
+      border-color: transparent;
+    }
+  }
+
+
+.shuttle button{
+      width: 50px;
+      margin-top: 7px ;
+      background-color: #dab328d5;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      float: right;
+}
+.information_shuttle{
+    width: 400px;
+    margin: 210px  -450px;
+    display: inline-block;
+    border-right:  solid 5px rgba(255, 0, 0, 0.377);
+    border-radius: 5px 0 0 5px;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 9.5px );
+-webkit-backdrop-filter: blur( 9.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    position: absolute;
+    text-align: center;
+    padding-top: 10px;
+    color: rgb(199, 191, 177);
+    transition: 2s ease;
+}
+.information_shuttle button{
+    content: '\002716';
+    margin: -30px -220px;
+    padding: 2px 5px;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    cursor: pointer;
+}
+
+.information_shuttle button::before{
+    content: '\002716';
+    padding: 2px 5px;
+    color: rgb(240, 227, 227);
+    border: solid 1px white;
+    border-radius:50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.show_infoShuttle{
+    display: none;
+}
+.hight_info_shuttle{
+    height: 600px;
+}
+.information_shuttle p{
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px 20px;
+}
+.information_shuttle ul{
+    list-style-type: none;
+}
+.information_shuttle li{
+    margin-left: 20px;
+}
+/*  */
 .imgShip{
     width: 200px;
     float: right;
     margin-right: 100px;
 }
+/*          main         */
 
 /*          text star war   */
 
@@ -232,14 +376,14 @@ section{
     z-index: 1;
   }
   
-  .star-wars {
+.star-wars {
       margin-left: 200px;
     display: flex;
     justify-content: center;
     position: relative;
     height: 800px;
     color: #f5f3ec;
-    text-shadow: 0 0 2px black;
+    text-shadow: 0 0 5px black;
     font-family: 'Pathway Gothic One', sans-serif;
     font-size: 250%;
     font-weight: 600;
