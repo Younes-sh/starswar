@@ -132,31 +132,31 @@ body{
     width: 100px;
     height: 30px;
     margin-top: 70px;
-    position: absolute;
+    position: fixed;
     background-color: transparent;
     border: none;
     font-size: 25px;
     cursor: pointer;
 }
-.btnSidebar::before{
+.btnClose::before{
     content: '\002613';
     color: rgb(228, 80, 80);
 }
-.btnSidebar::before{
+.btnOpen::before{
     content: '\002630';
     color: white;
 
 }
 .sidebar{
-    width: 250px;
+    /* width: 250px; */
     height: 100vh;
     margin-top: 100px;
-    position: absolute;
+    position: fixed;
     float: right;
     background-color: rgba(46, 35, 35, 0.425);
     text-align: center;
 }
-.showSIdebar{
+.showSidebar{
     width: 250px;
     transition: 1s;
 }
