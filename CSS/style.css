@@ -196,7 +196,7 @@ body{
     border-radius: 50%;
     display: inline-block;
     position: relative;
-    animation: moveshuttle 150s infinite;
+    animation: moveshuttle 150s infinite  ;
 }
 @keyframes moveshuttle {
     from{
@@ -235,8 +235,10 @@ body{
 .shuttle-i{
     background-color: rgba(255, 255, 255, 0.13);
     border-radius: 5px;
-    padding: 5px;
+    padding: 7px;
     animation: shuttle-info 150s infinite;
+    position: absolute;
+    margin: -120px -180px;
 }
 .show-info{
     display: none;
@@ -377,7 +379,7 @@ section{
   }
   
 .star-wars {
-      margin-left: 200px;
+    margin-left: 200px;
     display: flex;
     justify-content: center;
     position: relative;
