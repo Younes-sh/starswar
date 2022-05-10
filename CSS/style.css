@@ -177,6 +177,16 @@ body{
     text-decoration: none;
     color: rgb(190, 190, 32);
 }
+/*              Responsiv Head   */
+@media screen and (max-width:815px) {
+    .head , .sidebar , .btnSidebar{
+        display: none;
+    }
+    body{
+        background-color: #d4c817;
+    }
+  
+}
 /*          main         */
 
 .container-mars{
