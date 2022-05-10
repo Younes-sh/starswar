@@ -196,7 +196,7 @@ body{
     border-radius: 50%;
     display: inline-block;
     position: relative;
-    animation: moveshuttle 150s infinite  ;
+    animation: moveshuttle 150s  infinite  ;
 }
 @keyframes moveshuttle {
     from{
